@@ -56,8 +56,8 @@ Sistema web full-stack para la gestión de una cafetería. Permite a los usuario
 ### 📄 Documentación Swagger
 ![Swagger](imagenes/09_swagger.png)
 
-### 🌙 Modo Oscuro
-![Modo oscuro](imagenes/10_dark_mode.png)
+### ☀️ Modo Claro
+![Modo claro](imagenes/10_dark_mode.png)
 
 ---
 
@@ -262,7 +262,7 @@ MappingProfileLFAH    ExceptionMiddlewareLFAH
 
 ## 👨‍💻 Autor
 
-**Luis Fernando Angulo Heredia**  
+**Lic. Ing. Luis Fernando Angulo Heredia**  
 Posgrado UPEA — Desarrollo Backend con .NET y C# Nivel Intermedio  
 Docente: Lic. Ing. Limber Mamani Canaza  
 Mayo 2026
