@@ -1,0 +1,102 @@
+@startuml Diagrama de Clases - Sistema Quiosco Cafetería
+
+skinparam classAttributeIconSize 0
+skinparam classFontSize 13
+skinparam classFontStyle bold
+skinparam classBackgroundColor #FFF3E0
+skinparam classBorderColor #8B4513
+skinparam classHeaderBackgroundColor #FFDDB5
+skinparam arrowColor #333333
+skinparam linetype ortho
+skinparam nodesep 80
+skinparam ranksep 100
+
+class Usuario {
+  - id : int
+  - name : String
+  - email : String
+  - password : String
+  - admin : boolean
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+class Categoria {
+  - id : int
+  - nombre : String
+  - icono : String
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+class Producto {
+  - id : int
+  - nombre : String
+  - precio : decimal
+  - imagen : String
+  - disponible : boolean
+  - categoria_id : int
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+class Mesa {
+  - id : int
+  - numero : int
+  - capacidad : int
+  - disponible : boolean
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+class Pedido {
+  - id : int
+  - user_id : int
+  - mesa_id : int
+  - total : decimal
+  - estado : boolean
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+class PedidoProducto {
+  - id : int
+  - pedido_id : int
+  - producto_id : int
+  - cantidad : int
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+class Pago {
+  - id : int
+  - pedido_id : int
+  - metodo : String
+  - monto : decimal
+  - fecha_pago : DateTime
+  - created_at : DateTime
+  - updated_at : DateTime
+  --
+  + {}() : void
+}
+
+Usuario "+1" --o "+0..*" Pedido    : realiza >
+Mesa    "+1" --o "+0..*" Pedido    : asignada a >
+Pedido  "+1" --o "+0..*" PedidoProducto : incluye >
+Producto "+1" --o "+0..*" PedidoProducto : detalla >
+Categoria "+1" --o "+0..*" Producto : contiene >
+Pedido  "+1" --o "+0..1" Pago      : pagado con >
+
+@enduml

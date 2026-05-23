@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2026-05-22 00:00:00">
+
+  <XMI.header>
+    <XMI.documentation>
+      <XMI.exporter>Enterprise Architect</XMI.exporter>
+      <XMI.exporterVersion>6.5</XMI.exporterVersion>
+    </XMI.documentation>
+  </XMI.header>
+
+  <XMI.content>
+    <UML:Model name="SistemaQuioscoCafeteria" xmi.id="MODEL_001">
+      <UML:Namespace.ownedElement>
+
+        <!-- CLASE: Usuario -->
+        <UML:Class name="Usuario" xmi.id="CLS_Usuario"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"         xmi.id="ATT_Usr_01" visibility="private" type="int"/>
+            <UML:Attribute name="name"       xmi.id="ATT_Usr_02" visibility="private" type="String"/>
+            <UML:Attribute name="email"      xmi.id="ATT_Usr_03" visibility="private" type="String"/>
+            <UML:Attribute name="password"   xmi.id="ATT_Usr_04" visibility="private" type="String"/>
+            <UML:Attribute name="admin"      xmi.id="ATT_Usr_05" visibility="private" type="boolean"/>
+            <UML:Attribute name="created_at" xmi.id="ATT_Usr_06" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at" xmi.id="ATT_Usr_07" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_Usr_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_Usr_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- CLASE: Categoria -->
+        <UML:Class name="Categoria" xmi.id="CLS_Categoria"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"         xmi.id="ATT_Cat_01" visibility="private" type="int"/>
+            <UML:Attribute name="nombre"     xmi.id="ATT_Cat_02" visibility="private" type="String"/>
+            <UML:Attribute name="icono"      xmi.id="ATT_Cat_03" visibility="private" type="String"/>
+            <UML:Attribute name="created_at" xmi.id="ATT_Cat_04" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at" xmi.id="ATT_Cat_05" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_Cat_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_Cat_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- CLASE: Producto -->
+        <UML:Class name="Producto" xmi.id="CLS_Producto"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"           xmi.id="ATT_Pro_01" visibility="private" type="int"/>
+            <UML:Attribute name="nombre"       xmi.id="ATT_Pro_02" visibility="private" type="String"/>
+            <UML:Attribute name="precio"       xmi.id="ATT_Pro_03" visibility="private" type="decimal"/>
+            <UML:Attribute name="imagen"       xmi.id="ATT_Pro_04" visibility="private" type="String"/>
+            <UML:Attribute name="disponible"   xmi.id="ATT_Pro_05" visibility="private" type="boolean"/>
+            <UML:Attribute name="categoria_id" xmi.id="ATT_Pro_06" visibility="private" type="int"/>
+            <UML:Attribute name="created_at"   xmi.id="ATT_Pro_07" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at"   xmi.id="ATT_Pro_08" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_Pro_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_Pro_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- CLASE: Mesa -->
+        <UML:Class name="Mesa" xmi.id="CLS_Mesa"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"         xmi.id="ATT_Mes_01" visibility="private" type="int"/>
+            <UML:Attribute name="numero"     xmi.id="ATT_Mes_02" visibility="private" type="int"/>
+            <UML:Attribute name="capacidad"  xmi.id="ATT_Mes_03" visibility="private" type="int"/>
+            <UML:Attribute name="disponible" xmi.id="ATT_Mes_04" visibility="private" type="boolean"/>
+            <UML:Attribute name="created_at" xmi.id="ATT_Mes_05" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at" xmi.id="ATT_Mes_06" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_Mes_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_Mes_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- CLASE: Pedido -->
+        <UML:Class name="Pedido" xmi.id="CLS_Pedido"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"         xmi.id="ATT_Ped_01" visibility="private" type="int"/>
+            <UML:Attribute name="user_id"    xmi.id="ATT_Ped_02" visibility="private" type="int"/>
+            <UML:Attribute name="mesa_id"    xmi.id="ATT_Ped_03" visibility="private" type="int"/>
+            <UML:Attribute name="total"      xmi.id="ATT_Ped_04" visibility="private" type="decimal"/>
+            <UML:Attribute name="estado"     xmi.id="ATT_Ped_05" visibility="private" type="boolean"/>
+            <UML:Attribute name="created_at" xmi.id="ATT_Ped_06" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at" xmi.id="ATT_Ped_07" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_Ped_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_Ped_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- CLASE: PedidoProducto -->
+        <UML:Class name="PedidoProducto" xmi.id="CLS_PedidoProducto"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"          xmi.id="ATT_PP_01" visibility="private" type="int"/>
+            <UML:Attribute name="pedido_id"   xmi.id="ATT_PP_02" visibility="private" type="int"/>
+            <UML:Attribute name="producto_id" xmi.id="ATT_PP_03" visibility="private" type="int"/>
+            <UML:Attribute name="cantidad"    xmi.id="ATT_PP_04" visibility="private" type="int"/>
+            <UML:Attribute name="created_at"  xmi.id="ATT_PP_05" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at"  xmi.id="ATT_PP_06" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_PP_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_PP_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- CLASE: Pago -->
+        <UML:Class name="Pago" xmi.id="CLS_Pago"
+          visibility="public" isRoot="false" isLeaf="false"
+          isAbstract="false" isActive="false">
+          <UML:Classifier.feature>
+            <UML:Attribute name="id"         xmi.id="ATT_Pag_01" visibility="private" type="int"/>
+            <UML:Attribute name="pedido_id"  xmi.id="ATT_Pag_02" visibility="private" type="int"/>
+            <UML:Attribute name="metodo"     xmi.id="ATT_Pag_03" visibility="private" type="String"/>
+            <UML:Attribute name="monto"      xmi.id="ATT_Pag_04" visibility="private" type="decimal"/>
+            <UML:Attribute name="fecha_pago" xmi.id="ATT_Pag_05" visibility="private" type="DateTime"/>
+            <UML:Attribute name="created_at" xmi.id="ATT_Pag_06" visibility="private" type="DateTime"/>
+            <UML:Attribute name="updated_at" xmi.id="ATT_Pag_07" visibility="private" type="DateTime"/>
+            <UML:Operation name="{}" xmi.id="OP_Pag_01" visibility="public">
+              <UML:BehavioralFeature.parameter>
+                <UML:Parameter name="return" xmi.id="P_Pag_01" kind="return" type="void"/>
+              </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+          </UML:Classifier.feature>
+        </UML:Class>
+
+        <!-- ASOCIACION: Usuario 1 realiza 0..* Pedido -->
+        <UML:Association name="realiza" xmi.id="ASS_Usr_Ped">
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id="AE_Usr_Ped_A"
+              visibility="public" type="CLS_Usuario"
+              multiplicity="1" isNavigable="false" aggregation="none"/>
+            <UML:AssociationEnd xmi.id="AE_Usr_Ped_B"
+              visibility="public" type="CLS_Pedido"
+              multiplicity="0..*" isNavigable="true" aggregation="none"/>
+          </UML:Association.connection>
+        </UML:Association>
+
+        <!-- ASOCIACION: Mesa 1 asignada a 0..* Pedido -->
+        <UML:Association name="asignada a" xmi.id="ASS_Mes_Ped">
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id="AE_Mes_Ped_A"
+              visibility="public" type="CLS_Mesa"
+              multiplicity="1" isNavigable="false" aggregation="none"/>
+            <UML:AssociationEnd xmi.id="AE_Mes_Ped_B"
+              visibility="public" type="CLS_Pedido"
+              multiplicity="0..*" isNavigable="true" aggregation="none"/>
+          </UML:Association.connection>
+        </UML:Association>
+
+        <!-- ASOCIACION: Pedido 1 incluye 0..* PedidoProducto -->
+        <UML:Association name="incluye" xmi.id="ASS_Ped_PP">
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id="AE_Ped_PP_A"
+              visibility="public" type="CLS_Pedido"
+              multiplicity="1" isNavigable="false" aggregation="none"/>
+            <UML:AssociationEnd xmi.id="AE_Ped_PP_B"
+              visibility="public" type="CLS_PedidoProducto"
+              multiplicity="0..*" isNavigable="true" aggregation="none"/>
+          </UML:Association.connection>
+        </UML:Association>
+
+        <!-- ASOCIACION: Producto 1 detalla 0..* PedidoProducto -->
+        <UML:Association name="detalla" xmi.id="ASS_Pro_PP">
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id="AE_Pro_PP_A"
+              visibility="public" type="CLS_Producto"
+              multiplicity="1" isNavigable="false" aggregation="none"/>
+            <UML:AssociationEnd xmi.id="AE_Pro_PP_B"
+              visibility="public" type="CLS_PedidoProducto"
+              multiplicity="0..*" isNavigable="true" aggregation="none"/>
+          </UML:Association.connection>
+        </UML:Association>
+
+        <!-- ASOCIACION: Categoria 1 contiene 0..* Producto -->
+        <UML:Association name="contiene" xmi.id="ASS_Cat_Pro">
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id="AE_Cat_Pro_A"
+              visibility="public" type="CLS_Categoria"
+              multiplicity="1" isNavigable="false" aggregation="none"/>
+            <UML:AssociationEnd xmi.id="AE_Cat_Pro_B"
+              visibility="public" type="CLS_Producto"
+              multiplicity="0..*" isNavigable="true" aggregation="none"/>
+          </UML:Association.connection>
+        </UML:Association>
+
+        <!-- ASOCIACION: Pedido 1 pagado con 0..1 Pago -->
+        <UML:Association name="pagado con" xmi.id="ASS_Ped_Pag">
+          <UML:Association.connection>
+            <UML:AssociationEnd xmi.id="AE_Ped_Pag_A"
+              visibility="public" type="CLS_Pedido"
+              multiplicity="1" isNavigable="false" aggregation="none"/>
+            <UML:AssociationEnd xmi.id="AE_Ped_Pag_B"
+              visibility="public" type="CLS_Pago"
+              multiplicity="0..1" isNavigable="true" aggregation="none"/>
+          </UML:Association.connection>
+        </UML:Association>
+
+      </UML:Namespace.ownedElement>
+    </UML:Model>
+  </XMI.content>
+
+</XMI>

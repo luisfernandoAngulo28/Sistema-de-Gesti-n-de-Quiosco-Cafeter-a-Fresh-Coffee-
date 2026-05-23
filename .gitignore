@@ -1,0 +1,37 @@
+# ── Excluir proyecto Laravel ──────────────────────────────
+laravel-quiosco/
+
+# ── Frontend — Node ───────────────────────────────────────
+react-quiosco/node_modules/
+react-quiosco/dist/
+react-quiosco/.env
+react-quiosco/.env.local
+react-quiosco/.env.production
+
+# ── Backend — .NET ────────────────────────────────────────
+QuioscoAPI/bin/
+QuioscoAPI/obj/
+QuioscoAPI/*.user
+QuioscoAPI/appsettings.json
+QuioscoAPI/appsettings.Development.json
+QuioscoAPI/appsettings.Production.json
+
+# ── Secretos / configuración sensible ────────────────────
+*.env
+.env
+appsettings*.json
+
+# ── Archivos ZIP ──────────────────────────────────────────
+*.zip
+
+# ── Sistema operativo ─────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDEs ──────────────────────────────────────────────────
+.vs/
+.vscode/
+*.suo
+*.user
+.idea/

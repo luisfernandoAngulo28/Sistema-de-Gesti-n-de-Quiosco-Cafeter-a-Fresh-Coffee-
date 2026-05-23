@@ -1,0 +1,12 @@
+Guardar aqui las capturas de pantalla con estos nombres exactos:
+
+01_login.png           → Pantalla de inicio de sesión
+02_quiosco.png         → Vista principal del quiosco con categorías y productos
+03_modal_producto.png  → Modal para seleccionar cantidad de un producto
+04_resumen_pedido.png  → Panel derecho con resumen del pedido y método de pago
+05_gracias_pagado.png  → Página de confirmación con badge PAGADO
+06_mis_pedidos.png     → Historial de pedidos del usuario
+07_admin_ordenes.png   → Panel admin - lista de órdenes
+08_admin_mesas.png     → Panel admin - gestión de mesas
+09_swagger.png         → Documentación Swagger de la API
+10_dark_mode.png       → Vista en modo oscuro (opcional)
