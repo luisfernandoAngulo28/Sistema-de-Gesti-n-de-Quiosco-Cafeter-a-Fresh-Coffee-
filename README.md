@@ -263,6 +263,8 @@ MappingProfileLFAH    ExceptionMiddlewareLFAH
 ## 👨‍💻 Autor
 
 **Lic. Ing. Luis Fernando Angulo Heredia**  
+Software Developer | Full Stack Developer  
+.NET • React • Flutter • Backend Development
 Posgrado UPEA — Desarrollo Backend con .NET y C# Nivel Intermedio  
 Docente: Lic. Ing. Limber Mamani Canaza  
 Mayo 2026
